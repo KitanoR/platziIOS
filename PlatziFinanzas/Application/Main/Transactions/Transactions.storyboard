@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fXS-6K-f8U">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Transactions View Controller-->
+        <scene sceneID="GSc-Ic-5eT">
+            <objects>
+                <viewController id="OH4-tV-oBc" customClass="TransactionsViewController" customModule="PlatziFinanzas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s9j-fs-gGx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kba-1S-ybQ">
+                                <rect key="frame" x="0.0" y="121" width="320" height="398"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="OH4-tV-oBc" id="fz0-gG-ZqZ"/>
+                                    <outlet property="delegate" destination="OH4-tV-oBc" id="R7H-l0-hTm"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7H9-xk-LZA">
+                                <rect key="frame" x="0.0" y="96" width="320" height="10"/>
+                                <color key="backgroundColor" name="RedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="IVN-N0-b3p"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwA-6f-AnN">
+                                <rect key="frame" x="110" y="283.5" width="100" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="LiG-Nx-AV8"/>
+                                    <constraint firstAttribute="height" constant="1" id="Ob2-r1-81v"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kba-1S-ybQ" firstAttribute="top" secondItem="N8x-Fh-051" secondAttribute="top" id="1gq-wm-Dgd"/>
+                            <constraint firstItem="Kba-1S-ybQ" firstAttribute="leading" secondItem="N8x-Fh-051" secondAttribute="leading" id="9Ry-QX-0RI"/>
+                            <constraint firstItem="N8x-Fh-051" firstAttribute="trailing" secondItem="Kba-1S-ybQ" secondAttribute="trailing" id="L1t-dm-Fhr"/>
+                            <constraint firstItem="7H9-xk-LZA" firstAttribute="top" secondItem="N8x-Fh-051" secondAttribute="top" id="RZz-9m-dJ1"/>
+                            <constraint firstItem="Kba-1S-ybQ" firstAttribute="leading" secondItem="N8x-Fh-051" secondAttribute="leading" id="bhi-Zr-gqm"/>
+                            <constraint firstItem="Kba-1S-ybQ" firstAttribute="top" secondItem="N8x-Fh-051" secondAttribute="top" constant="10" id="eDu-WJ-gQ6"/>
+                            <constraint firstItem="N8x-Fh-051" firstAttribute="bottom" secondItem="Kba-1S-ybQ" secondAttribute="bottom" id="gHg-Fg-B8l"/>
+                            <constraint firstItem="N8x-Fh-051" firstAttribute="trailing" secondItem="7H9-xk-LZA" secondAttribute="trailing" id="iyB-YS-xhh"/>
+                            <constraint firstItem="WwA-6f-AnN" firstAttribute="centerX" secondItem="s9j-fs-gGx" secondAttribute="centerX" id="mBc-A1-jQb"/>
+                            <constraint firstItem="Kba-1S-ybQ" firstAttribute="top" secondItem="7H9-xk-LZA" secondAttribute="bottom" constant="15" id="oVF-RP-xfH"/>
+                            <constraint firstItem="WwA-6f-AnN" firstAttribute="centerY" secondItem="s9j-fs-gGx" secondAttribute="centerY" id="r1G-wt-Byd"/>
+                            <constraint firstItem="N8x-Fh-051" firstAttribute="bottom" secondItem="Kba-1S-ybQ" secondAttribute="bottom" id="sRj-81-FHJ"/>
+                            <constraint firstItem="7H9-xk-LZA" firstAttribute="leading" secondItem="N8x-Fh-051" secondAttribute="leading" id="uX5-h5-SRW"/>
+                            <constraint firstItem="Kba-1S-ybQ" firstAttribute="trailing" secondItem="N8x-Fh-051" secondAttribute="trailing" id="wW1-5y-NxO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N8x-Fh-051"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HIE-OR-Dwv"/>
+                    <connections>
+                        <outlet property="otropunteado" destination="WwA-6f-AnN" id="bdh-nu-ZsS"/>
+                        <outlet property="punteado" destination="Kba-1S-ybQ" id="0Yh-z9-qnx"/>
+                        <outlet property="tableView" destination="Kba-1S-ybQ" id="bBB-FQ-jwE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gSL-Fg-rCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1479.375" y="-1045.7746478873239"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lhI-Ys-lMg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fXS-6K-f8U" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="TabTransaction" id="Vfy-JY-1V2"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="xgX-yK-B8s">
+                        <rect key="frame" x="0.0" y="20" width="320" height="91"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="GreenColor"/>
+                        <color key="barTintColor" name="GreenColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OH4-tV-oBc" kind="relationship" relationship="rootViewController" id="3sp-Wt-354"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AcC-hw-ntT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="441" y="-1045"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TabTransaction" width="20" height="20"/>
+        <namedColor name="GreenColor">
+            <color red="0.62352941176470589" green="0.74117647058823533" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="RedColor">
+            <color red="0.80099999904632568" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
